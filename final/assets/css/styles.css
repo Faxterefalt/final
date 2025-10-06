@@ -1,0 +1,109 @@
+/* styles.css - paleta: guindo (vino oscuro), blanco, marrón, negro */
+:root{
+  --guindo: #d3d3d3;
+  --blanco:#A52A2A;
+  --marron: #6b3f2b;
+  --negro: #f9f7f7;
+  --gris: #f7acac;
+  --container: 1100px;
+  --radius: 12px;
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--negro);
+  background:var(--gris);
+  line-height:1.45;
+}
+
+/* Container */
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{background:var(--blanco);box-shadow:0 2px 8px rgba(0,0,0,0.06);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;gap:1rem;padding:0.6rem 1rem}
+.brand{display:flex;align-items:center;gap:0.75rem}
+.logo{width:80px;height:64px;object-fit:cover;border-radius:8px}
+.brand h1{font-size:1.25rem;margin-bottom:0}
+.tag{font-size:0.82rem;color:#f8f6f6}
+
+/* Nav */
+.main-nav{margin-left:auto;display:flex;gap:0.75rem;align-items:center}
+.main-nav a{padding:0.5rem;color:#eee8e8;text-decoration:none;border-radius:8px}
+.main-nav a:hover{background:rgba(0,0,0,0.04)}
+
+/* WhatsApp small */
+.whatsapp-btn{background:var(--guindo);color:var(--blanco);padding:0.5rem 0.75rem;border-radius:8px;text-decoration:none;margin-left:0.5rem}
+
+/* Hero */
+.hero{height:520px;background-size:cover;background-position:center;display:flex;align-items:center;color:var(--blanco)}
+.hero .overlay{background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.45));padding:2rem;border-radius:12px}
+.hero h2{font-size:2.2rem;margin-bottom:0.25rem}
+.hero p{margin-bottom:1rem}
+
+/* Buttons */
+.btn{background:var(--guindo);color:var(--blanco);padding:0.6rem 1rem;border-radius:10px;text-decoration:none;border:none;cursor:pointer}
+.btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.6)}
+.btn.small{padding:0.35rem 0.6rem;font-size:0.9rem}
+.btn.whatsapp-large{display:inline-block;margin-top:0.5rem}
+
+/* Sections */
+h3{margin:1rem 0;font-size:1.3rem;color:var(--guindo)}
+
+/* Promos grid */
+.promos{padding:1.5rem 0}
+.promo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.promo-card{background:var(--blanco);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.promo-card img{width:100%;height:160px;object-fit:cover}
+.promo-content{padding:0.75rem}
+
+/* Productos estrella */
+.estrellas{padding:1.5rem 0}
+.estrellas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.estrella-card{background:var(--blanco);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.estrella-card img{width:100%;height:260px;object-fit:cover}
+.estrella-info{padding:0.75rem;display:flex;flex-direction:column;gap:0.5rem}
+.estrella-info .meta{display:flex;justify-content:space-between;align-items:center}
+
+/* Menu */
+.menu-section{padding:1.5rem 0}
+.menu-controls{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+.menu-controls input, .menu-controls select{padding:0.5rem;border-radius:8px;border:1px solid #ddd}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.menu-item{background:var(--blanco);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.menu-item img{width:100%;height:180px;object-fit:cover}
+.menu-info{padding:0.75rem;display:flex;flex-direction:column;gap:0.5rem}
+.menu-info .meta{display:flex;justify-content:space-between;align-items:center}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.5rem}
+.gallery-grid img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+
+/* Ubicación */
+.ubicacion-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+.ubicacion .map iframe{width:100%;height:280px;border-radius:8px;border:0}
+
+/* Opiniones */
+.opinion-list{display:flex;flex-direction:column;gap:0.75rem}
+.opinion-list blockquote{background:var(--blanco);padding:1rem;border-radius:10px;border-left:4px solid var(--marron)}
+
+/* Contacto */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+.form label{display:block;margin-bottom:0.65rem}
+.form input,.form textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid #ddd;margin-top:0.35rem}
+.form textarea{min-height:120px;resize:vertical}
+
+/* Footer */
+.site-footer{background:#0b0b0b;color:#fff;padding:1rem 0;margin-top:1rem}
+.site-footer p{margin:0;text-align:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .header-inner{flex-wrap:wrap}
+  .main-nav{order:3;width:100%;justify-content:space-around}
+  .ubicacion-grid, .contact-grid, .menu-grid{grid-template-columns:1fr}
+  .hero{height:380px}
+}
