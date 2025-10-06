@@ -31,7 +31,6 @@ $whatsapp = "59171234567";
         <a href="promociones.php">Promociones</a>
         <a href="ubicacion.php">Ubicación</a>
         <a href="contacto.php">Contacto</a>
-        <a href="https://wa.me/<?=$whatsapp?>?text=Hola%20Acai%20Life" target="_blank" class="whatsapp-btn">WhatsApp</a>
       </nav>
     </div>
   </header>
