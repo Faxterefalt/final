@@ -7,7 +7,7 @@ $menu = [
     ["id"=>4,"categoria"=>"Malteadas","nombre"=>"Malteada deluxe","descripcion"=>"Malteada de fresa con crema y cereza.","precio"=>"22 Bs","img"=>"assets/img/malteada2.jpg"],
 ];
 
-$whatsapp = "59171234567"; // Cambia por tu número real
+$whatsapp = "59171234567";
 ?><!doctype html>
 <html lang="es">
 <head>
@@ -47,7 +47,7 @@ $whatsapp = "59171234567"; // Cambia por tu número real
           <a href="menu.php" class="btn">Ver menú</a>
         </div>
         <figure class="hero-figure" aria-hidden="true">
-          <img src="assets/img/vaso-rotacion.png" alt="Malteada girando" class="hero-glass">
+          <div id="scene-container" class="scene-3d"></div>
         </figure>
       </div>
     </section>
@@ -78,6 +78,10 @@ $whatsapp = "59171234567"; // Cambia por tu número real
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  
   <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/scene.js"></script>
 </body>
 </html>
