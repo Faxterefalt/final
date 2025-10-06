@@ -1,5 +1,4 @@
 <?php
-// index.php - Página principal de Acai Life
 $menu = [
     ["id"=>1,"categoria"=>"Postres","nombre"=>"Fresas con crema clásica","descripcion"=>"Fresas frescas con crema batida.","precio"=>"15 Bs","img"=>"assets/img/fresas-copa.jpg"],
     ["id"=>2,"categoria"=>"Postres","nombre"=>"Fresas con crema especial","descripcion"=>"Con galleta y trozos crocantes.","precio"=>"18 Bs","img"=>"assets/img/fresas-galleta.jpg"],
@@ -7,14 +6,13 @@ $menu = [
     ["id"=>4,"categoria"=>"Malteadas","nombre"=>"Malteada deluxe","descripcion"=>"Malteada de fresa con crema y cereza.","precio"=>"22 Bs","img"=>"assets/img/malteada2.jpg"],
 ];
 
-$whatsapp = "59171234567"; // Cambia por tu número real
+$whatsapp = "59171234567";
 ?><!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ACAI LIFE - Inicio</title>
-  <meta name="description" content="Acai Life - Snacks saludables en Sacaba" />
+  <title>Menú - ACAI LIFE</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -39,34 +37,34 @@ $whatsapp = "59171234567"; // Cambia por tu número real
   </header>
 
   <main>
-    <section id="inicio" class="hero" style="background-image: url('assets/img/fresas-bg.jpg');">
-      <div class="container hero-content">
-        <div class="hero-copy">
-          <h2>Dulzura que gira alrededor de ti</h2>
-          <p>Refresca tu día con nuestra malteada estrella.</p>
-          <a href="menu.php" class="btn">Ver menú</a>
-        </div>
-        <figure class="hero-figure" aria-hidden="true">
-          <img src="assets/img/vaso-rotacion.png" alt="Malteada girando" class="hero-glass">
-        </figure>
+    <section class="container menu-section">
+      <h3>Nuestro Menú</h3>
+      <div class="menu-controls">
+        <label>Filtrar:
+          <select id="filtro-categoria">
+            <option value="all">Todos</option>
+            <?php
+              $cats = array_unique(array_map(fn($m)=>$m['categoria'],$menu));
+              foreach ($cats as $c) echo "<option value=\"" . htmlspecialchars($c) . "\">" . htmlspecialchars($c) . "</option>";
+            ?>
+          </select>
+        </label>
+        <input id="search" placeholder="Buscar producto..." />
       </div>
-    </section>
 
-    <section id="estrellas" class="container estrellas">
-      <h3>Productos estrella</h3>
-      <div class="estrellas-grid">
-        <?php foreach(array_slice($menu,0,4) as $m): ?>
-        <article class="estrella-card">
-          <img src="<?=htmlspecialchars($m['img'])?>" alt="<?=htmlspecialchars($m['nombre'])?>">
-          <div class="estrella-info">
-            <h4><?=htmlspecialchars($m['nombre'])?></h4>
-            <p><?=htmlspecialchars($m['descripcion'])?></p>
-            <div class="meta">
-              <span class="price"><?=htmlspecialchars($m['precio'])?></span>
-              <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20pedir:%20<?=urlencode($m['nombre'])?>" target="_blank" class="btn small">Pedir</a>
+      <div id="menu-grid" class="menu-grid">
+        <?php foreach($menu as $item): ?>
+          <article class="menu-item" data-categoria="<?=htmlspecialchars($item['categoria'])?>">
+            <img src="<?=htmlspecialchars($item['img'])?>" alt="<?=htmlspecialchars($item['nombre'])?>">
+            <div class="menu-info">
+              <h4><?=htmlspecialchars($item['nombre'])?></h4>
+              <p class="desc"><?=htmlspecialchars($item['descripcion'])?></p>
+              <div class="meta">
+                <span class="price"><?=htmlspecialchars($item['precio'])?></span>
+                <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20pedir:%20<?=urlencode($item['nombre'])?>" target="_blank" class="btn small">Pedir</a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
         <?php endforeach; ?>
       </div>
     </section>
