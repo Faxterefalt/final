@@ -6,8 +6,8 @@ $whatsapp = "71234567";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ubicación - ACAI LIFE</title>
-<link rel="stylesheet" href="assets/css/common.css" />
-<link rel="stylesheet" href="assets/css/ubicacion.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/ubicacion.css" />
 </head>
 <body>
   <header class="site-header">
@@ -23,14 +23,50 @@ $whatsapp = "71234567";
         <a href="index.php">Inicio</a>
         <a href="menu.php">Menú</a>
         <a href="promociones.php">Promociones</a>
-        <a href="ubicacion.php">Ubicación</a>
+        <a href="ubicacion.php#encuentranos" class="scroll-to-section">Ubicación</a>
         <a href="contacto.php">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="container ubicacion">
+    <section class="container galeria-negocio">
+      <h3>Conoce nuestro local</h3>
+      <div class="galeria-grid">
+        <div class="galeria-item galeria-destacada">
+          <img src="assets/img/ubi/ubi1.png" alt="Vista principal Acai Life" loading="lazy">
+          <div class="galeria-overlay">
+            <span>Vista principal</span>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/ubi/ubi2.png" alt="Interior del local" loading="lazy">
+          <div class="galeria-overlay">
+            <span>Interior</span>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/ubi/ubi3.png" alt="Zona de atención" loading="lazy">
+          <div class="galeria-overlay">
+            <span>Atención al cliente</span>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/ubi/ubi4.png" alt="Ambiente acogedor" loading="lazy">
+          <div class="galeria-overlay">
+            <span>Ambiente</span>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/ubi/ubi5.png" alt="Detalles del negocio" loading="lazy">
+          <div class="galeria-overlay">
+            <span>Detalles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="encuentranos" class="container ubicacion">
       <h3>Encuéntranos</h3>
       <div class="ubicacion-grid">
         <div class="map">
@@ -69,5 +105,76 @@ $whatsapp = "71234567";
       <p>© <?=date('Y')?> Acai Life · Hecho por Liz & Aracely</p>
     </div>
   </footer>
+
+  <script>
+    function smoothScrollTo(target, duration) {
+      const header = document.querySelector('.site-header');
+      const headerHeight = header ? header.offsetHeight : 0;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
+
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+    window.addEventListener('load', function() {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 1);
+        
+        setTimeout(function() {
+          const targetElement = document.querySelector(hash);
+          if (targetElement) {
+            smoothScrollTo(targetElement, 1200);
+          }
+        }, 100);
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const allLinks = document.querySelectorAll('a[href*="#"]');
+      
+      allLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          
+          if (href.includes('#encuentranos')) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const targetElement = document.getElementById('encuentranos');
+            
+            if (targetElement) {
+              // Si ya estamos en ubicacion.php, hacer scroll directo
+              if (window.location.pathname.includes('ubicacion.php')) {
+                smoothScrollTo(targetElement, 1200);
+              } else {
+
+                window.location.href = href;
+              }
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
