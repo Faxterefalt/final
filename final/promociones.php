@@ -6,8 +6,8 @@ $whatsapp = "59171234567";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Promociones - ACAI LIFE</title>
-<link rel="stylesheet" href="assets/css/common.css" />
-<link rel="stylesheet" href="assets/css/promociones.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/promociones.css" />
 </head>
 <body>
   <header class="site-header">
@@ -33,24 +33,59 @@ $whatsapp = "59171234567";
     <section class="container promos">
       <h3>Promociones Especiales</h3>
       <div class="promo-grid">
+        <!-- Promo Super Especial -->
         <article class="promo-card">
-          <img src="assets/img/promos/promo3.jpg" alt="Promo 1">
+          <img src="assets/img/promos/promo3.jpg" alt="Super promo - Día especial" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
           <div class="promo-content">
             <h4>Super promo - Día especial</h4>
-            <p>3x80 Bs - ¡Aprovecha!</p>
-            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%203x80" target="_blank" class="btn small">Pedir ahora</a>
+            <p>3x80 Bs - ¡Aprovecha esta oferta increíble!</p>
+            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%203x80%20Bs" target="_blank" class="btn small">Pedir ahora</a>
           </div>
         </article>
+
+        <!-- Promo Fresas + Helado -->
         <article class="promo-card">
-          <img src="assets/img/promos/promo1.jpg" alt="Promo 2">
+          <img src="assets/img/promos/promo1.jpg" alt="2x60 Bs Fresas + Helado" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
           <div class="promo-content">
             <h4>2x60 Bs Fresas + Helado</h4>
-            <p>Solo por tiempo limitado.</p>
-            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%202x60" target="_blank" class="btn small">Pedir ahora</a>
+            <p>Deliciosas fresas con helado. Solo por tiempo limitado.</p>
+            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%202x60%20Fresas%20+%20Helado" target="_blank" class="btn small">Pedir ahora</a>
+          </div>
+        </article>
+
+        <!-- Promo Helado por Peso -->
+        <article class="promo-card featured">
+          <img src="assets/img/promos/promohelado.jpg" alt="Helado por peso" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
+          <div class="promo-content">
+            <h4>🍦 Helado por Peso</h4>
+            <p><strong>1 Bs cada 20 gramos
+              y 100 gramos por 5 Bs
+            </strong></p>
+            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20helado%20por%20peso" target="_blank" class="btn small">Consultar</a>
+          </div>
+        </article>
+
+        <!-- Promo Día de la Mujer 1 -->
+        <article class="promo-card special">
+          <img src="assets/img/promos/promodiamujer1.jpeg" alt="Promo Día de la Mujer 1" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
+          <div class="promo-content">
+            <h4>💐 Día de la Mujer 1</h4>
+            <p><strong>2x25 Bs</strong><br>Celebra con nosotras</p>
+            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%20Día%20de%20la%20Mujer%202x25%20Bs" target="_blank" class="btn small">Pedir ahora</a>
+          </div>
+        </article>
+
+        <!-- Promo Día de la Mujer 2 -->
+        <article class="promo-card special">
+          <img src="assets/img/promos/promodiamujer2.jpeg" alt="Promo Día de la Mujer 2" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
+          <div class="promo-content">
+            <h4>💐 Día de la Mujer 2</h4>
+            <p><strong>2x20 Bs</strong><br>Oferta especial para ti</p>
+            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%20Día%20de%20la%20Mujer%202x20%20Bs" target="_blank" class="btn small">Pedir ahora</a>
           </div>
         </article>
       </div>
-
+    </section>
   </main>
 
   <footer class="site-footer">
