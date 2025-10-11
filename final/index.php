@@ -39,7 +39,12 @@ $whatsapp = "59171234567";
   </header>
 
   <main>
-    <section id="inicio" class="hero" style="background-image: url('assets/img/fresas-bg.jpg');">
+    <section id="inicio" class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+                <!-- AQUÍ SE PUEDE CAMBIAR EL VÍDEO DE FONDO-->
+        <source src="assets/img/videos/fresasnegocio.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
       <div class="container hero-content">
         <div class="hero-copy">
           <h2>Dulzura que gira alrededor de ti</h2>

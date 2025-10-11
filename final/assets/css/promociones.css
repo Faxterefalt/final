@@ -1,4 +1,4 @@
-/* promociones.css - Estilos específicos para la página de promociones */
+/* página de promociones */
 
 .promos{padding:1.5rem 0}
 .promo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}

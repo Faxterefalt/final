@@ -1,4 +1,4 @@
-/* ubicacion.css - Estilos específicos para la página de ubicación */
+/* página de ubicación */
 
 .ubicacion{padding:1.5rem 0 3rem}
 .ubicacion-grid{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:start}

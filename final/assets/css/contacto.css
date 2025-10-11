@@ -1,4 +1,4 @@
-/* contacto.css - Estilos específicos para la página de contacto */
+/* página de contacto */
 
 .contacto{padding:1.5rem 0 3rem}
 .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
