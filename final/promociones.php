@@ -51,17 +51,6 @@ $whatsapp = "59171234567";
         </article>
       </div>
 
-      <section class="gallery">
-        <h3>Galería de Productos</h3>
-        <div class="gallery-grid">
-          <img src="assets/img/fresas-copa.jpg" alt="">
-          <img src="assets/img/fresas-galleta.jpg" alt="">
-          <img src="assets/img/malteada1.jpg" alt="">
-          <img src="assets/img/malteada2.jpg" alt="">
-          <img src="assets/img/fresas-bg.jpg" alt="">
-        </div>
-      </section>
-    </section>
   </main>
 
   <footer class="site-footer">
