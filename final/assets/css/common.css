@@ -29,9 +29,61 @@ main{flex:1}
 /* Header */
 .site-header{background:var(--blanco);box-shadow:0 2px 8px rgba(0,0,0,0.06);position:sticky;top:0;z-index:50}
 .header-inner{display:flex;align-items:center;gap:1rem;padding:0.6rem 1rem}
-.brand{display:flex;align-items:center;gap:0.75rem}
-.logo{width:80px;height:64px;object-fit:cover;border-radius:8px}
-.brand h1{font-size:1.25rem;margin-bottom:0;color:var(--negro)}
+
+/* Brand con efecto de flecha al lado izquierdo del logo */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+  position:relative;
+  padding:0.5rem;
+  border-radius:8px;
+  transition:all 0.3s ease;
+  cursor:pointer;
+  text-decoration:none;
+}
+.brand::before{
+  content:'←';
+  position:absolute;
+  left:-25px;
+  top:50%;
+  transform:translateY(-50%) translateX(-10px);
+  opacity:0;
+  font-size:1.8rem;
+  font-weight:bold;
+  color:var(--negro);
+  transition:all 0.3s ease;
+  pointer-events:none;
+}
+.brand:hover{
+  background:rgba(255,255,255,0.1);
+  padding-left:1.5rem;
+}
+.brand:hover::before{
+  opacity:1;
+  transform:translateY(-50%) translateX(0);
+  left:0.3rem;
+}
+
+.logo{
+  width:80px;
+  height:64px;
+  object-fit:cover;
+  border-radius:8px;
+  transition:transform 0.3s ease;
+}
+.brand:hover .logo{
+  transform:scale(1.05);
+}
+.brand h1{
+  font-size:1.25rem;
+  margin-bottom:0;
+  color:var(--negro);
+  transition:transform 0.3s ease;
+}
+.brand:hover h1{
+  transform:translateX(3px);
+}
 .tag{font-size:0.82rem;color:#f8f6f6}
 
 /* Nav */
@@ -98,4 +150,10 @@ h3{margin:1rem 0;font-size:1.3rem;color:var(--blanco)}
 @media (max-width:900px){
   .header-inner{flex-wrap:wrap}
   .main-nav{order:3;width:100%;justify-content:space-around}
+  .brand::before{
+    display:none;
+  }
+  .brand:hover{
+    padding-left:0.5rem;
+  }
 }
