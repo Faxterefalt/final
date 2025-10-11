@@ -6,7 +6,8 @@ $whatsapp = "71234567";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ubicación - ACAI LIFE</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/common.css" />
+<link rel="stylesheet" href="assets/css/ubicacion.css" />
 </head>
 <body>
   <header class="site-header">

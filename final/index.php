@@ -15,7 +15,8 @@ $whatsapp = "59171234567";
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ACAI LIFE - Inicio</title>
   <meta name="description" content="Acai Life - Snacks saludables en Sacaba" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 <body>
   <header class="site-header">

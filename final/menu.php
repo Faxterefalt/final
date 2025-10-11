@@ -13,7 +13,8 @@ $whatsapp = "59171234567";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Menú - ACAI LIFE</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/common.css" />
+<link rel="stylesheet" href="assets/css/menu.css" />
 </head>
 <body>
   <header class="site-header">

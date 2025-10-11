@@ -1,0 +1,89 @@
+/* common.css - Estilos compartidos en todas las páginas */
+:root{
+  --guindo: #d3d3d3;
+  --blanco:#A52A2A;
+  --marron: #6b3f2b;
+  --negro: #f9f7f7;
+  --gris: #f7acac;
+  --container: 1100px;
+  --radius: 12px;
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;min-height:100vh}
+body{
+  font-family: Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--negro);
+  background:var(--gris);
+  line-height:1.45;
+  display:flex;
+  flex-direction:column;
+}
+
+main{flex:1}
+
+/* Container */
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{background:var(--blanco);box-shadow:0 2px 8px rgba(0,0,0,0.06);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;gap:1rem;padding:0.6rem 1rem}
+.brand{display:flex;align-items:center;gap:0.75rem}
+.logo{width:80px;height:64px;object-fit:cover;border-radius:8px}
+.brand h1{font-size:1.25rem;margin-bottom:0;color:var(--negro)}
+.tag{font-size:0.82rem;color:#f8f6f6}
+
+/* Nav */
+.main-nav{margin-left:auto;display:flex;gap:0.75rem;align-items:center}
+.main-nav a{padding:0.5rem;color:#eee8e8;text-decoration:none;border-radius:8px;transition:background 0.3s}
+.main-nav a:hover{background:rgba(0,0,0,0.04)}
+
+/* WhatsApp small */
+.whatsapp-btn{background:var(--guindo);color:var(--blanco);padding:0.5rem 0.75rem;border-radius:8px;text-decoration:none;margin-left:0.5rem;font-weight:600;transition:transform 0.2s}
+.whatsapp-btn:hover{transform:scale(1.05)}
+
+/* Buttons */
+.btn{
+  background:var(--guindo);
+  color:var(--blanco);
+  padding:0.6rem 1rem;
+  border-radius:10px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  display:inline-block;
+  font-weight:600;
+  transition:all 0.3s ease;
+}
+.btn:hover{
+  opacity:0.9;
+  transform:translateY(-2px);
+}
+.btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.6)}
+.btn.small{
+  padding:0.5rem 1rem;
+  font-size:0.95rem;
+  width:100%;
+  text-align:center;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+.btn.small:hover{
+  transform:translateY(-3px);
+}
+.btn.whatsapp-large{display:inline-block;margin-top:0.5rem}
+
+/* Sections */
+h3{margin:1rem 0;font-size:1.3rem;color:var(--blanco)}
+
+/* Footer */
+.site-footer{background:#0b0b0b;color:#fff;padding:1rem 0;margin-top:auto}
+.site-footer p{margin:0;text-align:center}
+
+/* Responsive base */
+@media (max-width:900px){
+  .header-inner{flex-wrap:wrap}
+  .main-nav{order:3;width:100%;justify-content:space-around}
+}
