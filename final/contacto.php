@@ -48,13 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <img src="assets/img/logo-acai.jpg" alt="Acai Life logo" class="logo">
-        <div>
-          <h1>ACAI LIFE</h1>
-          <p class="tag">Snacks saludables · Sacaba</p>
-        </div>
-      </div>
+<a href="index.php" class="brand">
+  <img src="assets/img/logo-acai.jpg" alt="Acai Life logo" class="logo">
+  <div>
+    <h1>ACAI LIFE</h1>
+    <p class="tag">Snacks saludables · Sacaba</p>
+  </div>
+</a>
       <nav class="main-nav">
         <a href="index.php">Inicio</a>
         <a href="menu.php">Menú</a>
