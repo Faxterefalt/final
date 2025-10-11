@@ -72,7 +72,7 @@
   console.log('Cargando modelo desde: assets/img/x.glb');
   
   loader.load(
-    'assets/img/fresas_con_crema.glb',
+    'assets/img/modelos3d/fresas_con_crema.glb',
     function (gltf) {
       console.log('Modelo cargado exitosamente');
       model = gltf.scene;

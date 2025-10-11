@@ -33,7 +33,7 @@ $whatsapp = "59171234567";
       <h3>Promociones Especiales</h3>
       <div class="promo-grid">
         <article class="promo-card">
-          <img src="assets/img/promo3.jpg" alt="Promo 1">
+          <img src="assets/img/promos/promo3.jpg" alt="Promo 1">
           <div class="promo-content">
             <h4>Super promo - Día especial</h4>
             <p>3x80 Bs - ¡Aprovecha!</p>
@@ -41,7 +41,7 @@ $whatsapp = "59171234567";
           </div>
         </article>
         <article class="promo-card">
-          <img src="assets/img/promo1.jpg" alt="Promo 2">
+          <img src="assets/img/promos/promo1.jpg" alt="Promo 2">
           <div class="promo-content">
             <h4>2x60 Bs Fresas + Helado</h4>
             <p>Solo por tiempo limitado.</p>

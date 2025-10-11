@@ -160,7 +160,7 @@ h3{margin:1rem 0;font-size:1.3rem;color:var(--blanco)}
 }
 .promo-content p{
   margin-bottom:0.75rem;
-  color:#666;
+  color:#e0e0e0;
   flex-grow:1;
 }
 .promo-content .btn{
@@ -208,7 +208,7 @@ h3{margin:1rem 0;font-size:1.3rem;color:var(--blanco)}
   min-height:2.5rem;
 }
 .estrella-info p{
-  color:#666;
+  color:#e8e8e8;
   font-size:0.95rem;
   line-height:1.5;
   flex-grow:1;
@@ -303,7 +303,7 @@ h3{margin:1rem 0;font-size:1.3rem;color:var(--blanco)}
 }
 .menu-info p,
 .menu-info .desc{
-  color:#666;
+  color:#e8e8e8;
   font-size:0.95rem;
   line-height:1.5;
   flex-grow:1;
@@ -348,7 +348,7 @@ h3{margin:1rem 0;font-size:1.3rem;color:var(--blanco)}
 }
 .ubicacion .info p{
   margin-bottom:1rem;
-  color:#444;
+  color:#e8e8e8;
   line-height:1.6;
 }
 .ubicacion .info .social-links{
@@ -400,7 +400,7 @@ h3{margin:1rem 0;font-size:1.3rem;color:var(--blanco)}
   margin-bottom:0.75rem;
 }
 .contact-info p{
-  color:#444;
+  color:#e8e8e8;
   margin-bottom:0.75rem;
 }
 .qr-payment{
