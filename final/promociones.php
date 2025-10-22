@@ -33,23 +33,23 @@ $whatsapp = "59171234567";
     <section class="container promos">
       <h3>Promociones Especiales</h3>
       <div class="promo-grid">
-        <!-- Promo Super Especial -->
+        <!-- Promo Nocturna-->
         <article class="promo-card">
-          <img src="assets/img/promos/promo3.jpg" alt="Super promo - Día especial" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
+          <img src="assets/img/promos/promonocturna.jpeg" alt="Promo Nocturna" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
           <div class="promo-content">
-            <h4>Super promo - Día especial</h4>
-            <p>3x80 Bs - ¡Aprovecha esta oferta increíble!</p>
-            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%203x80%20Bs" target="_blank" class="btn small">Pedir ahora</a>
+            <h4>Promo Nocturna</h4>
+            <p>2x20 Bs - ¡Aprovecha esta oferta increíble!</p>
+            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%20Nocturna%202x20%20Bs" target="_blank" class="btn small">Pedir ahora</a>
           </div>
         </article>
 
-        <!-- Promo Fresas + Helado -->
+        <!-- Jueves de Promo -->
         <article class="promo-card">
-          <img src="assets/img/promos/promo1.jpg" alt="2x60 Bs Fresas + Helado" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
+          <img src="assets/img/promos/juevesdepromo.jpeg" alt="2x35 Bs Jueves de Promo" loading="lazy" onerror="this.src='assets/img/logo-acai.jpg'">
           <div class="promo-content">
-            <h4>2x60 Bs Fresas + Helado</h4>
-            <p>Deliciosas fresas con helado. Solo por tiempo limitado.</p>
-            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%202x60%20Fresas%20+%20Helado" target="_blank" class="btn small">Pedir ahora</a>
+            <h4>Jueves de Promo</h4>
+            <p>2x35 Bs - Deliciosas fresas con helado. </p>
+            <a href="https://wa.me/<?=$whatsapp?>?text=Hola,%20quiero%20la%20promo%202x35%20Jueves%20de%20Promo" target="_blank" class="btn small">Pedir ahora</a>
           </div>
         </article>
 
