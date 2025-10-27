@@ -127,6 +127,91 @@
   text-shadow:2px 2px 4px rgba(0,0,0,0.8);
 }
 
+/* REDES SOCIALES EN HERO */
+.social-links-hero{
+  display:flex;
+  justify-content:center;
+  gap:1.25rem;
+  margin-top:1.5rem;
+}
+
+.social-link{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all 0.3s ease;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  border:2px solid rgba(255,255,255,0.3);
+  position:relative;
+  overflow:hidden;
+}
+
+.social-link::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  opacity:0;
+  transition:opacity 0.3s ease;
+}
+
+.social-link:hover::before{
+  opacity:1;
+}
+
+.social-link svg{
+  width:24px;
+  height:24px;
+  fill:#ffffff;
+  position:relative;
+  z-index:1;
+  transition:transform 0.3s ease;
+}
+
+.social-link:hover svg{
+  transform:scale(1.15) rotate(5deg);
+}
+
+/* Colores específicos para cada red social */
+.social-link.whatsapp:hover{
+  background:#25D366;
+  border-color:#25D366;
+  box-shadow:0 5px 20px rgba(37,211,102,0.5);
+}
+
+.social-link.instagram:hover{
+  background:linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+  border-color:#E1306C;
+  box-shadow:0 5px 20px rgba(225,48,108,0.5);
+}
+
+.social-link.facebook:hover{
+  background:#1877F2;
+  border-color:#1877F2;
+  box-shadow:0 5px 20px rgba(24,119,242,0.5);
+}
+
+/* Animación sutil de pulso */
+@keyframes pulse-soft {
+  0%, 100% {
+    transform:scale(1);
+  }
+  50% {
+    transform:scale(1.05);
+  }
+}
+
+.social-link:hover{
+  animation:pulse-soft 2s ease-in-out infinite;
+}
+
 /* MODELO 3D */
 .hero-figure{
   flex:1;
@@ -231,6 +316,20 @@
     text-align:center;
     max-width:100%;
     order:2;
+  }
+  
+  .social-links-hero{
+    gap:1rem;
+  }
+  
+  .social-link{
+    width:45px;
+    height:45px;
+  }
+  
+  .social-link svg{
+    width:22px;
+    height:22px;
   }
   
   .hero-figure{
