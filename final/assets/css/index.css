@@ -40,30 +40,110 @@
   position:relative;
   z-index:2;
 }
+
+.hero-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:2rem;
+}
+
+/* CARRUSEL DE IMÁGENES */
+.carousel-container{
+  flex:1;
+  max-width:350px;
+  position:relative;
+}
+
+.carousel-wrapper{
+  position:relative;
+  width:100%;
+  height:350px;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,0.4);
+}
+
+.carousel-slide{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active{
+  opacity:1;
+}
+
+.carousel-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.carousel-indicators{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:12px;
+}
+
+.indicator{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.5);
+  cursor:pointer;
+  transition:background 0.3s ease;
+}
+
+.indicator.active{
+  background:rgba(255,255,255,1);
+  width:12px;
+  height:12px;
+}
+
+/* TEXTO CENTRAL */
+.hero-copy{
+  flex:1;
+  max-width:450px;
+  text-align:center;
+}
+
 .hero h2{
   font-size:2.2rem;
   margin-bottom:0.5rem;
   color:#ffffff;
   text-shadow:3px 3px 6px rgba(0,0,0,0.8);
 }
+
 .hero p{
   margin-bottom:1rem;
   color:#ffffff;
   font-size:1.1rem;
   text-shadow:2px 2px 4px rgba(0,0,0,0.8);
 }
-.hero-content{display:flex;justify-content:space-between;align-items:center;gap:2rem}
-.hero-copy{
+
+/* MODELO 3D */
+.hero-figure{
   flex:1;
-  max-width:500px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:400px;
+  max-width:350px;
 }
-.hero-figure{flex:1;display:flex;justify-content:center;align-items:center;min-height:400px}
+
 .scene-3d{
   width:100%;
   height:400px;
   max-width:500px;
   position:relative;
 }
+
 .scene-3d canvas{
   border-radius:12px;
   display:block;
@@ -135,10 +215,31 @@
 
 /* Responsive */
 @media (max-width:900px){
-  .hero{height:auto;min-height:600px}
+  .hero{height:auto;min-height:650px;padding:2rem 0}
   .hero-content{flex-direction:column;padding:2rem 0}
-  .hero-copy{text-align:center;max-width:100%}
-  .hero-figure{width:100%;min-height:350px}
+  
+  .carousel-container{
+    max-width:100%;
+    width:100%;
+  }
+  
+  .carousel-wrapper{
+    height:300px;
+  }
+  
+  .hero-copy{
+    text-align:center;
+    max-width:100%;
+    order:2;
+  }
+  
+  .hero-figure{
+    width:100%;
+    min-height:350px;
+    max-width:100%;
+    order:3;
+  }
+  
   .scene-3d{height:350px}
   .estrellas-grid{grid-template-columns:1fr}
 }

@@ -1,10 +1,19 @@
 <?php
+
 // index.php - Página principal de Acai Life
 $menu = [
     ["id"=>1,"categoria"=>"Postres","nombre"=>"Fresas con crema clásica","descripcion"=>"Fresas frescas con crema batida.","precio"=>"15 Bs","img"=>"assets/img/menu/fresasconcremadeluxe.png"],
     ["id"=>2,"categoria"=>"Postres","nombre"=>"Fresas con crema especial","descripcion"=>"Con galleta y trozos crocantes.","precio"=>"18 Bs","img"=>"assets/img/menu/fresasconcremaclasica.jpg"],
     ["id"=>3,"categoria"=>"Malteadas","nombre"=>"Malteada fresa crema","descripcion"=>"Leche, helado de fresa, crema batida.","precio"=>"20 Bs","img"=>"assets/img/menu/malteadadeluxe.png"],
     ["id"=>4,"categoria"=>"Malteadas","nombre"=>"Malteada deluxe","descripcion"=>"Malteada de fresa con crema y cereza.","precio"=>"22 Bs","img"=>"assets/img/menu/malteadafresaconcrema.png"],
+];
+
+// Imágenes del carrusel
+$carouselImages = [
+    "assets/img/menu/frutasconcremanutella.jpg",
+    "assets/img/menu/fresasconcremadeluxe.png",
+    "assets/img/menu/duraznoconcremanutella.jpg",
+    "assets/img/menu/arrozconlechenutella.jpg"
 ];
 
 $whatsapp = "59171234567";
@@ -41,16 +50,34 @@ $whatsapp = "59171234567";
   <main>
     <section id="inicio" class="hero">
       <video class="hero-video" autoplay muted loop playsinline>
-                <!-- AQUÍ SE PUEDE CAMBIAR EL VÍDEO DE FONDO-->
         <source src="assets/img/videos/fresasnegocio.mp4" type="video/mp4">
         Tu navegador no soporta videos HTML5.
       </video>
       <div class="container hero-content">
+        <!-- CARRUSEL DE IMÁGENES -->
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <?php foreach($carouselImages as $index => $img): ?>
+            <div class="carousel-slide <?= $index === 0 ? 'active' : '' ?>">
+              <img src="<?= htmlspecialchars($img) ?>" alt="Producto <?= $index + 1 ?>">
+            </div>
+            <?php endforeach; ?>
+          </div>
+          <div class="carousel-indicators">
+            <?php foreach($carouselImages as $index => $img): ?>
+            <span class="indicator <?= $index === 0 ? 'active' : '' ?>" data-slide="<?= $index ?>"></span>
+            <?php endforeach; ?>
+          </div>
+        </div>
+
+        <!-- TEXTO CENTRAL -->
         <div class="hero-copy">
           <h2>Dulzura que gira alrededor de ti</h2>
           <p>Refresca tu día con nuestra malteada estrella.</p>
           <a href="menu.php" class="btn">Ver menú</a>
         </div>
+
+        <!-- MODELO 3D -->
         <figure class="hero-figure" aria-hidden="true">
           <div id="scene-container" class="scene-3d"></div>
         </figure>
@@ -88,5 +115,6 @@ $whatsapp = "59171234567";
   
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/scene.js"></script>
+  <script src="assets/js/carousel.js"></script>
 </body>
 </html>
